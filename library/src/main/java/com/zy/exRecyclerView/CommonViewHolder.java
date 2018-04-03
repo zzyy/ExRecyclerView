@@ -10,10 +10,10 @@ import android.view.View;
  *
  * Created by Simon on 2016/8/18.
  */
-public class CommonRecyclerHolder extends RecyclerView.ViewHolder {
+public class CommonViewHolder extends RecyclerView.ViewHolder {
     private final SparseArray<View> mViews;
 
-    public CommonRecyclerHolder(View itemView) {
+    public CommonViewHolder(View itemView) {
         super(itemView);
         this.mViews = new SparseArray<>(8);
     }

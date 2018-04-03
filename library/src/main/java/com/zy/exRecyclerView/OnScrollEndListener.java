@@ -8,7 +8,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 /**
  * 继承自RecyclerView.OnScrollListener，可以监听到是否滑动到页面最低部
  */
-public abstract class EndlessRecyclerOnScrollListener extends RecyclerView.OnScrollListener {
+public abstract class OnScrollEndListener extends RecyclerView.OnScrollListener {
 
     /**
      * 当前RecyclerView类型
@@ -39,7 +39,7 @@ public abstract class EndlessRecyclerOnScrollListener extends RecyclerView.OnScr
         int visibleItemCount = layoutManager.getChildCount();
         int totalItemCount = layoutManager.getItemCount();
         if ((visibleItemCount > 0 && newState == RecyclerView.SCROLL_STATE_IDLE && (mLastVisibleItemPosition) >= totalItemCount - 1)) {
-            onScrolledEndless(recyclerView);
+            onScrollEnd(recyclerView);
         }
     }
 
@@ -100,7 +100,7 @@ public abstract class EndlessRecyclerOnScrollListener extends RecyclerView.OnScr
     /**
      * 滚动到最后的回调
      */
-    public abstract void onScrolledEndless(final RecyclerView view);
+    public abstract void onScrollEnd(final RecyclerView view);
 
     public static enum LayoutManagerType {
         LinearLayout,

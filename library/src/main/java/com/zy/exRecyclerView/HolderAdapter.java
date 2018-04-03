@@ -10,10 +10,10 @@ import android.view.ViewGroup;
  * Created by Simon on 2017/5/19.
  */
 
-public abstract class HolderAdapter extends RecyclerView.Adapter<CommonRecyclerHolder> {
+public abstract class HolderAdapter extends RecyclerView.Adapter<CommonViewHolder> {
     @Override
-    public CommonRecyclerHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new CommonRecyclerHolder(this.onCreateView(parent, viewType));
+    public CommonViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new CommonViewHolder(this.onCreateView(parent, viewType));
     }
 
     public abstract View onCreateView(ViewGroup parent, int viewType);
